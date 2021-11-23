@@ -50,8 +50,10 @@ int loadProgram(struct LMC *lmc, char* filename) {
     while(fgets(buffer, LINELENGTH, fileptr) != NULL) {
 
 
-        if(buffer[0] == '#' || buffer[0] == '/')
+        if(buffer[0] == '#' || buffer[0] == '/') {
             continue;
+        }
+
 
         /*
          * MEMORYSIZE represents the hard limit on the LMC's memory capacity.
